@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Alert from './components/layout/Alert';
+import NotFound from './components/layout/NotFound';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Dashboard from './components/dashboard/Dashboard';
@@ -62,6 +63,7 @@ function App() {
                                 component={AddEducation}
                             />
                             <PrivateRoute path='/posts' component={Posts} />
+                            <Route component={NotFound} />
                         </Switch>
                     </section>
                 </div>
