@@ -49,7 +49,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         }
     };
     if (isAuthenticated) {
-        return <Redirect to='dashboard' />;
+        return <Redirect to='/dashboard' />;
     }
     return (
         <div>
@@ -126,4 +126,4 @@ Register.propTypes = {
 const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
 });
-export default connect(null, { setAlert, register })(Register);
+export default connect(mapStateToProps, { setAlert, register })(Register);

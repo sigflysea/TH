@@ -124,25 +124,21 @@ export const createProfile = (formData, history, edit = false) => async (
     }
 };
 //Add experience
-export const addExperience = (formData, history) => async (dispatch) => {
+export const addTripLog = (formData, history) => async (dispatch) => {
     try {
         const config = {
             headers: {
                 'Content-Type': 'application/json',
             },
         };
-        const res = await axios.put(
-            '/api/profile/experience',
-            formData,
-            config
-        );
+        const res = await axios.put('/api/profile/tripLog', formData, config);
 
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data,
         });
 
-        dispatch(setAlert('Experience updated', 'success'));
+        dispatch(setAlert('Trip updated', 'success'));
         history.push('/dashboard');
     } catch (err) {
         const errors = err.response.data.errors;

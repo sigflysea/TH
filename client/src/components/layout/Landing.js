@@ -11,10 +11,11 @@ const Landing = ({ isAuthenticated }) => {
         <section className='landing'>
             <div className='dark-overlay'>
                 <div className='landing-inner'>
-                    <h1 className='x-large'>Developer Connector</h1>
+                    <h1 className='x-large'>Travel Hack</h1>
                     <p className='lead'>
-                        Create a developer profile/portfolio, share posts and
-                        get help from other developers
+                        Let the travel hackers to help you plan your trips and
+                        be a travel hacker to share your travel wisdom with
+                        others
                     </p>
                     <div className='buttons'>
                         <Link to='register' className='btn btn-primary'>

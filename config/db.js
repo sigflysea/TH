@@ -11,7 +11,7 @@ const connectDB = async () => {
             useCreateIndex: true,
             useFindAndModify: false, //to remove the warning about depecrated findOne()
         });
-        console.log('MongoDB Yeah');
+        console.log('Travel Yeah');
     } catch (err) {
         console.log(err.message);
         process.exit(1);

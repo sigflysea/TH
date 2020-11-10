@@ -5,54 +5,18 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
-    const authlinks = (
-        <ul>
-            <li>
-                <Link to='/profiles'>Developers</Link>
-            </li>
-            <li>
-                <Link to='/posts'>Posts</Link>
-            </li>
-            <li>
-                <Link to='/dashboard'>
-                    <i className='fas fa-user' />{' '}
-                    <span className='hide-sm'>Dashboard</span>
-                </Link>
-            </li>
-            <li>
-                <a onClick={logout} href='#!'>
-                    <i className='fas fa-sign-out-alt' />{' '}
-                    <span className='hide-sm'>Logout</span>
-                </a>
-            </li>
-        </ul>
-    );
-
-    const guestLinks = (
-        <ul>
-            <li>
-                <a href='#!'>Developers</a>
-            </li>
-            <li>
-                <Link to='/register'>Register</Link>
-            </li>
-            <li>
-                <Link to='/login'>Login</Link>
-            </li>
-        </ul>
-    );
     return (
         <nav className='navbar bg-dark'>
             <h1>
                 <Link to='/'>
-                    <i className='fas fa-code'></i> DevConnector
+                    <i class='far fa-compass'></i> TravelHacker
                 </Link>
             </h1>
             {/* <Fragment>{isAuthenticated ? authlinks : guestLinks}</Fragment> */}
             {isAuthenticated ? (
                 <ul>
                     <li>
-                        <Link to='/profiles'>Developers</Link>
+                        <Link to='/profiles'>Members</Link>
                     </li>
                     <li>
                         <Link to='/posts'>Posts</Link>
@@ -73,7 +37,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
             ) : (
                 <ul>
                     <li>
-                        <Link to='profiles'>Developers</Link>
+                        <Link to='profiles'>Members</Link>
                     </li>
                     <li>
                         <Link to='/register'>Register</Link>
