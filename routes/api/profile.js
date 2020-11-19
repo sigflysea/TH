@@ -39,7 +39,6 @@ router.post('/', [auth], async (req, res) => {
         location,
         interests,
         bio,
-        tripLog,
         youtube,
         twitter,
         instagram,
@@ -49,14 +48,9 @@ router.post('/', [auth], async (req, res) => {
 
     const profileFields = {
         user: req.userP.id,
-
         location,
         interests,
         bio,
-        tripLog: Array.isArray(tripLog)
-            ? tripLog
-            : tripLog.split(',').map((skill) => ' ' + skill.trim()),
-        status,
     };
 
     // Build social object and add to profileFields

@@ -8,7 +8,6 @@ const CreateProfile = ({ createProfile, history }) => {
     const [formData, setFormData] = useState({
         location: '',
         interests: '',
-        tripLog: '',
         bio: '',
         twitter: '',
         facebook: '',
@@ -20,7 +19,6 @@ const CreateProfile = ({ createProfile, history }) => {
         location,
         interests,
         bio,
-        tripLog,
         youtube,
         twitter,
         instagram,
