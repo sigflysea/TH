@@ -73,19 +73,22 @@ router.post('/', [auth], async (req, res) => {
             socialfields[key] = normalize(value, { forceHttps: true });
     }
     profileFields.social = socialfields;
+    console.log('====================================');
+    console.log('GOT HEREEEEEEE');
+    console.log('====================================');
 
-    try {
-        // Using upsert option (creates new doc if no match is found):
-        let profile = await Profile.findOneAndUpdate(
-            { user: req.userP.id },
-            { $set: profileFields },
-            { new: true, upsert: true, setDefaultsOnInsert: true }
-        );
-        res.json(profile);
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server Error');
-    }
+    // try {
+    //     // Using upsert option (creates new doc if no match is found):
+    //     let profile = await Profile.findOneAndUpdate(
+    //         { user: req.userP.id },
+    //         { $set: profileFields },
+    //         { new: true, upsert: true, setDefaultsOnInsert: true }
+    //     );
+    //     res.json(profile);
+    // } catch (err) {
+    //     console.error(err.message);
+    //     res.status(500).send('Server Error');
+    // }
 });
 
 //Get all profile

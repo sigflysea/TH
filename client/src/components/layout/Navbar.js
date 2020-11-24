@@ -9,7 +9,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         <nav className='navbar bg-dark'>
             <h1>
                 <Link to='/'>
-                    <i class='far fa-compass'></i> TravelHacker
+                    <i class='far fa-compass'></i> DevConnector
                 </Link>
             </h1>
             {/* <Fragment>{isAuthenticated ? authlinks : guestLinks}</Fragment> */}
