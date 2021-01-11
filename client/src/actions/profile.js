@@ -158,51 +158,15 @@ export const addTripLog = (formData, history) => async (dispatch) => {
     }
 };
 
-//Add education
-export const addEducation = (formData, history) => async (dispatch) => {
-    try {
-        const config = {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        };
-        const res = await axios.put('/api/profile/education', formData, config);
-
-        dispatch({
-            type: UPDATE_PROFILE,
-            payload: res.data,
-        });
-
-        dispatch(setAlert('Education updated', 'success'));
-
-        history.push('/dashboard');
-    } catch (err) {
-        const errors = err.response.data.errors;
-
-        if (errors) {
-            errors.forEach((e) => {
-                dispatch(setAlert(e.msg, 'danger'));
-            });
-        }
-        dispatch({
-            type: PROFILE_ERROR,
-            payload: {
-                msg: err.response.statusText,
-                status: err.response.status,
-            },
-        });
-    }
-};
-
 //delete experience
-export const deleteExperience = (id) => async (dispatch) => {
+export const deleteTripLog = (id) => async (dispatch) => {
     try {
-        const res = await axios.delete(`/api/profile/experience/${id}`);
+        const res = await axios.delete(`/api/profile/tripLog/${id}`);
         dispatch({
             type: UPDATE_PROFILE,
             payload: res.data,
         });
-        dispatch(setAlert('Experience removed', 'success'));
+        dispatch(setAlert('Trip removed', 'success'));
     } catch (err) {
         const errors = err.response.data.errors;
 
@@ -221,32 +185,6 @@ export const deleteExperience = (id) => async (dispatch) => {
     }
 };
 
-//delete education
-export const deleteEducation = (id) => async (dispatch) => {
-    try {
-        const res = await axios.delete(`/api/profile/education/${id}`);
-        dispatch({
-            type: UPDATE_PROFILE,
-            payload: res.data,
-        });
-        dispatch(setAlert('Education removed', 'success'));
-    } catch (err) {
-        const errors = err.response.data.errors;
-
-        if (errors) {
-            errors.forEach((e) => {
-                dispatch(setAlert(e.msg, 'danger'));
-            });
-        }
-        dispatch({
-            type: PROFILE_ERROR,
-            payload: {
-                msg: err.response.statusText,
-                status: err.response.status,
-            },
-        });
-    }
-};
 //delete account & profile
 export const deleteAccount = () => async (dispatch) => {
     if (window.confirm('Are you sure? This can NOT be undone!')) {

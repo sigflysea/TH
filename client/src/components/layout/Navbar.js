@@ -12,7 +12,6 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
                     <i class='far fa-compass'></i> DevConnector
                 </Link>
             </h1>
-            {/* <Fragment>{isAuthenticated ? authlinks : guestLinks}</Fragment> */}
             {isAuthenticated ? (
                 <ul>
                     <li>

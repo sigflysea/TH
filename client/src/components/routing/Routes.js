@@ -31,7 +31,6 @@ const Routes = () => {
                 />
                 <PrivateRoute path='/edit-profile' component={EditProfile} />
                 <PrivateRoute path='/add-tripLog' component={AddTripLog} />
-                {/* <PrivateRoute path='/add-education' component={AddEducation} /> */}
                 <PrivateRoute exact path='/posts' component={Posts} />
                 <PrivateRoute exact path='/posts/:id' component={Post} />
                 <Route component={NotFound} />

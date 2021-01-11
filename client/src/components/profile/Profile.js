@@ -34,25 +34,23 @@ const Profile = ({
                             </Link>
                         )}
 
-                    <div class='profile-grid my-1'>
+                    <div class='profile-grid my-1 profile-about bg-light p-2'>
                         <ProfileTop profile={profile} />
                         <ProfileAbout profile={profile} />
 
-                        <div className='profile-exp bg-white p-2'>
-                            <h2 className='text-primary'>Experience</h2>
-                            {profile.tripLog.length > 0 ? (
-                                <Fragment>
-                                    {profile.tripLog.map((tripLog) => (
-                                        <ProfileTripLog
-                                            key={tripLog._id}
-                                            tripLog={tripLog}
-                                        />
-                                    ))}
-                                </Fragment>
-                            ) : (
-                                <h4>No trip log</h4>
-                            )}
-                        </div>
+                        <h2 className='text-primary'>Trips</h2>
+                        {profile.tripLog.length > 0 ? (
+                            <Fragment>
+                                {profile.tripLog.map((tripLog) => (
+                                    <ProfileTripLog
+                                        key={tripLog._id}
+                                        tripLog={tripLog}
+                                    />
+                                ))}
+                            </Fragment>
+                        ) : (
+                            <h4>No trip log</h4>
+                        )}
                     </div>
                 </Fragment>
             )}

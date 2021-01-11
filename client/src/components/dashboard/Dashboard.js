@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
-import Experience from './Experience';
-import Education from './Education';
+import TripLog from './TripLog';
 
 const Dashboard = ({
     getCurrentProfile,
@@ -28,8 +27,8 @@ const Dashboard = ({
             {profile !== null ? (
                 <Fragment>
                     <DashboardActions />
-                    {/* <Experience experience={profile.experience} />
-                    <Education education={profile.education} /> */}
+                    <TripLog tripLog={profile.tripLog} />
+
                     <div className='my-2'>
                         <button
                             className='btn btn-danger'

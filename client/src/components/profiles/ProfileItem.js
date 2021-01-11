@@ -6,7 +6,7 @@ const ProfileItem = ({
     profile: {
         user: { _id, name, avatar },
         location,
-        tripLog,
+        interests,
     },
 }) => {
     return (
@@ -20,10 +20,10 @@ const ProfileItem = ({
                 </Link>
             </div>
             <ul>
-                {tripLog.slice(0, 4).map((trip, index) => (
+                {interests.slice(0, 4).map((interest, index) => (
                     <li key={index} className='text-primary'>
                         <i className='fas fa-check' />
-                        {trip}
+                        {interest}
                     </li>
                 ))}
             </ul>
