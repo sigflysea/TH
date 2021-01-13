@@ -31,13 +31,12 @@ const TripLog = ({ tripLog, deleteTripLog }) => {
     ));
     return (
         <Fragment>
-            <h2 className='my-2'>Experience Crentials</h2>
+            <h2 className='my-2'>Trips</h2>
             <table className='table'>
                 <thead>
                     <tr>
                         <th>Location</th>
-                        <th className='hide-sm'>From</th>
-                        <th className='hide-sm'>To</th>
+                        <th className='hide-sm'>Date</th>
                         <th className='hide-sm'>Description</th>
                     </tr>
                 </thead>

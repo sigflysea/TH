@@ -12,13 +12,7 @@ const AddTripLog = ({ addTripLog, history }) => {
         description: '',
     });
     const [toDateDisabled, toggleDisabled] = useState(false);
-    const {
-        location,
-        from,
-        to,
-
-        description,
-    } = formData;
+    const { location, from, to, description } = formData;
 
     const onChange = (e) =>
         setFormData({ ...formData, [e.target.name]: e.target.value });
