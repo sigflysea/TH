@@ -52,13 +52,14 @@ const PostItem = ({
                             </span>
                         )}
                     </Link>
+
                     {!auth.loading && user === auth.user._id && (
                         <button
                             onClick={() => deletePost(_id)}
                             type='button'
                             className='btn btn-danger'
                         >
-                            <i className='fas fa-times' />
+                            <i class='fas fa-trash'></i>
                         </button>
                     )}
                 </Fragment>
