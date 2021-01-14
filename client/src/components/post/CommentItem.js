@@ -31,8 +31,8 @@ const CommentItem = ({
                     <i class='fas fa-trash'></i>
                 </button>
             )}
-            {console.log(auth.loading)}
         </div>
+        {console.log(auth.loading)}
     </div>
 );
 
