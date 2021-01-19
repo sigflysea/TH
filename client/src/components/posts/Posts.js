@@ -23,7 +23,6 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
                 {posts.map((post) => (
                     <PostItem key={post._id} post={post} />
                 ))}
-                {console.log('t')}
             </div>
         </Fragment>
     );
