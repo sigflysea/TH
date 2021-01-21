@@ -9,7 +9,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         <nav className='navbar bg-dark'>
             <h1>
                 <Link to='/'>
-                    <i class='far fa-compass'></i> DevConnector
+                    <i class='fas fa-map'></i> TravelHacks
                 </Link>
             </h1>
             {isAuthenticated ? (
